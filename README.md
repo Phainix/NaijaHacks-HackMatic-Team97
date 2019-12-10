@@ -9,17 +9,15 @@
  - Okonknwo Chidimma Benita, okonkwobenita84@gmail.com
 
 # Problem
-Education in the jet age is driven by information, and the internet as we know is filled a lot of unreliable information
-which students consider in making decisions. Undergraduates joining the workforce lack some of the skill set required 
-and so have a hard timing adjusting to the expectations required of them.
+Learners in today's world are faced with difficulties ranging from retention,
+team work, overdependence on teachers and boredom / lack of motivation. This difficulties are more prominent as a result of the default classroom learning methodology which comes of as boring and monotonous to learners in the digital age. Learners do not have opportunities to work together and as a result timid learners might be relegated in favour of more active ones.
 
 # Proposed Solution
-A platform to connect students from various instituions to foster collaboration and share information
-on emerging trends in different fields of study etc. This platform will provide guidance to students on course
-selection, internship positions, scholarship opportunitues etc.
+A platform that implements Problem-based learning (PBL) to drive learner interaction. This app provides an alernative, fun path to learning by presenting academic concepts in form of challenges to ignite the interest of students. Learning by applying is one of the best ways to retain knowledge and on Edmatic students can apply academic concepts in scenarios which improves their critical thinking skills.
+Students from various instituions are connected to foster collaboration and share information on emerging trends in different fields of study etc.
 
 # Proposed Stack
-Java Android, PHP, MySQL
+Java Android, PHP, MySQL, Firebase
 
 # Features of the android app 📱
 * Registration 
@@ -38,5 +36,5 @@ Java Android, PHP, MySQL
 
 # Benefits
  - Improve collaboration of students on research, competions.
- - Access to reliable information of scholarships, admissions and internship opportunities.
  - Provide information on career opportunities and the skillset required to meet the workforce demand.
+ - Promote knowledge retention by presenting academic concepts as real life problem scenarios.
