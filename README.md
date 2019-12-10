@@ -21,6 +21,21 @@ selection, internship positions, scholarship opportunitues etc.
 # Proposed Stack
 Java Android, PHP, MySQL
 
+# Features of the android app 📱
+* Registration 
+* Login
+* Create a team
+  * Accept a challenge 
+  * Answer questions from a challenge 
+  * Declare winner of a challenge 
+* Join a team 
+* Leave a team 
+* Dashboard to display user details 
+* List past competition/challenge
+* List upcoming competition/challenge 
+* A tab that contains updates on latest admission, scholarships and internships opportunity 
+
+
 # Benefits
  - Improve collaboration of students on research, competions.
  - Access to reliable information of scholarships, admissions and internship opportunities.
