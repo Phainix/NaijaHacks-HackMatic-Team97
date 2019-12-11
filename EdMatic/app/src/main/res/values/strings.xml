@@ -9,4 +9,6 @@
     <string name="sign_up_google">Sign up with Google</string>
     <string name="sign_up_twitter">Sign up with Twitter</string>
     <string name="signin_prompt">Already a member? Sign in</string>
+    <string name="detail">Personal Details</string>
+    <string name="detail_desc">We need some personal information to setup your account</string>
 </resources>
