@@ -28,15 +28,17 @@
     <style name="ButtonRounded">
         <item name="android:layout_height">60dp</item>
         <item name="android:layout_marginBottom">40dp</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:capitalize">none</item>
         <item name="android:paddingStart">40dp</item>
         <item name="android:paddingEnd">40dp</item>
     </style>
 
     <style name="AuthButton" parent="ButtonRounded">
-        <item name="android:layout_marginStart">50dp</item>
-        <item name="android:layout_marginEnd">50dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
     </style>
 
 </resources>
