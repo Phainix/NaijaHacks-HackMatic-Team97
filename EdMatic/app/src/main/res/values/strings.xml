@@ -11,4 +11,29 @@
     <string name="signin_prompt">Already a member? Sign in</string>
     <string name="detail">Personal Details</string>
     <string name="detail_desc">We need some personal information to setup your account</string>
+    <string name="input_first_name">Enter first name</string>
+    <string name="input_last_name">Enter last name</string>
+    <string name="input_gender">Select gender</string>
+    <string name="input_dob">Enter date of birth eg. yyyy-mm-dd</string>
+    <string name="input_grade">Select grade</string>
+    <string name="input_level">Select level</string>
+    <string name="input_institution">Enter institution name</string>
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="grade">
+        <item>Junior Secondary</item>
+        <item>Senior Secondary</item>
+        <item>Diploma</item>
+        <item>University</item>
+    </string-array>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
