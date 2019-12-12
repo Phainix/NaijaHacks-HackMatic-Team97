@@ -36,4 +36,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_team">Team</string>
+    <string name="title_account">Account</string>
+    <string name="title_competitions">Competitions</string>
 </resources>
