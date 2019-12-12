@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/light_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/detail"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_light_bg" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/rubik_medium"
+        android:lineSpacingExtra="10sp"
+        android:text="@string/detail"
+        style="@style/DarkMediumText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="40dp"/>
+
+    <TextView
+        android:id="@+id/detail_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/detail_desc"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail"
+        android:textAlignment="center"
+        android:lineHeight="22sp"/>
+
+    <EditText
+        android:id="@+id/first_name"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/detail_desc"
+        app:layout_constraintStart_toStartOf="@+id/detail_desc"
+        app:layout_constraintTop_toBottomOf="@+id/detail_desc"
+        android:hint="@string/input_first_name"
+        android:layout_marginTop="60dp"
+        android:inputType="text"
+        android:autofillHints="@string/input_first_name"
+        />
+
+    <EditText
+        android:id="@+id/last_name"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/first_name"
+        app:layout_constraintStart_toStartOf="@+id/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/first_name"
+        android:hint="@string/input_last_name"
+        android:inputType="text"
+        android:autofillHints="@string/input_last_name"
+        />
+
+    <Spinner
+        android:id="@+id/gender"
+        android:spinnerMode="dropdown"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/last_name"
+        app:layout_constraintStart_toStartOf="@+id/last_name"
+        app:layout_constraintTop_toBottomOf="@+id/last_name"
+        android:entries="@array/gender"
+        android:prompt="@string/input_gender"
+        android:paddingStart="20dp"/>
+
+    <EditText
+        android:id="@+id/dob"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/gender"
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/gender"
+        android:hint="@string/input_dob"
+        android:inputType="date"
+        android:autofillHints="@string/input_dob"
+        />
+
+    <Spinner
+        android:id="@+id/grade"
+        android:spinnerMode="dropdown"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/dob"
+        app:layout_constraintStart_toStartOf="@+id/dob"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
+        android:entries="@array/grade"
+        android:hint="@string/input_gender"
+        android:paddingStart="20dp"/>
+
+    <Spinner
+        android:id="@+id/level"
+        android:spinnerMode="dropdown"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/grade"
+        app:layout_constraintStart_toStartOf="@+id/grade"
+        app:layout_constraintTop_toBottomOf="@+id/grade"
+        android:paddingStart="20dp"
+        />
+
+    <EditText
+        android:id="@+id/institution"
+        style="@style/Input"
+        app:layout_constraintEnd_toEndOf="@+id/level"
+        app:layout_constraintStart_toStartOf="@+id/level"
+        app:layout_constraintTop_toBottomOf="@+id/level"
+        android:hint="@string/input_institution"
+        android:inputType="text"
+        android:autofillHints="@string/input_institution"
+        />
+
+    <Button
+        android:id="@+id/details_skip"
+        style="@style/DefaultButton"
+        android:text="@string/skip"
+        app:layout_constraintStart_toStartOf="@+id/institution"
+        app:layout_constraintTop_toBottomOf="@+id/institution"
+        android:layout_marginTop="40dp"
+        android:layout_width="120dp"/>
+
+    <Button
+        android:id="@+id/details_submit"
+        style="@style/DefaultButton"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="@+id/institution"
+        app:layout_constraintTop_toBottomOf="@+id/institution"
+        android:layout_marginTop="40dp"
+        android:layout_width="120dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

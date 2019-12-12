@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SigninActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signup_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/signin_bottom"
+        app:layout_constraintVertical_weight="60">
+
+        <ImageView
+            android:id="@+id/light_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/sign_in"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_light_bg" />
+
+        <ImageView
+            android:id="@+id/signin_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/light_bg"
+            app:layout_constraintEnd_toEndOf="@+id/light_bg"
+            app:layout_constraintStart_toStartOf="@+id/light_bg"
+            app:layout_constraintTop_toTopOf="@+id/light_bg"
+            app:srcCompat="@drawable/ic_signin" />
+
+        <TextView
+            android:id="@+id/signin_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/rubik_medium"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/sign_in"
+            style="@style/DarkMediumText"
+            app:layout_constraintEnd_toEndOf="@+id/signin_image"
+            app:layout_constraintStart_toStartOf="@+id/signin_image"
+            app:layout_constraintTop_toBottomOf="@+id/signin_image"
+            app:layout_constraintBottom_toBottomOf="@+id/light_bg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="40">
+
+        <ImageView
+            android:id="@+id/dark_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/sign_in"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_dark_bg" />
+
+        <Button
+            android:id="@+id/googleAuth"
+            style="@style/AuthButton"
+            android:layout_width="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_light"
+            android:drawableLeft="@drawable/ic_google"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/sign_in_google"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/dark_bg"
+            app:layout_constraintStart_toStartOf="@+id/dark_bg"
+            app:layout_constraintTop_toTopOf="@+id/dark_bg" />
+
+        <Button
+            android:id="@+id/twitterAuth"
+            style="@style/AuthButton"
+            android:layout_width="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_light"
+            android:drawableLeft="@drawable/ic_twitter"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/sign_in_twitter"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/dark_bg"
+            app:layout_constraintStart_toStartOf="@+id/dark_bg"
+            app:layout_constraintTop_toBottomOf="@+id/googleAuth" />
+
+        <TextView
+            android:id="@+id/signup_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/rubik_medium"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/signup_prompt"
+            android:textColor="@color/colorLightPrimaryDark"
+            app:layout_constraintEnd_toEndOf="@+id/dark_bg"
+            app:layout_constraintStart_toStartOf="@+id/dark_bg"
+            app:layout_constraintTop_toBottomOf="@+id/twitterAuth"
+            android:layout_marginTop="30dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
