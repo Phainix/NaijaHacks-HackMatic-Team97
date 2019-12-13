@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/light_bg"
@@ -32,37 +32,27 @@
         android:drawableRight="@drawable/ic_search"
         />
 
-    <ScrollView
-        android:id="@+id/teams_container"
+    <ListView
+        android:id="@+id/teams"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/primary_blue"
+        android:paddingTop="45dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:fillViewport="true"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/primary_blue"
-        android:paddingTop="45dp"
-        >
-
-        <LinearLayout
-            android:id="@+id/teams"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:divider="@drawable/spacer_medium"
-            android:showDividers="middle"/>
-
-    </ScrollView>
+        tools:context="com.hackmatic.edmatic.ui.team.TeamFragment"
+        tools:listitem="@layout/team_list_item"/>
 
     <View
         android:layout_width="100dp"
         android:layout_height="5dp"
         android:background="@drawable/round_blue_bg"
-        app:layout_constraintTop_toTopOf="@id/teams_container"
-        app:layout_constraintStart_toStartOf="@id/teams_container"
-        app:layout_constraintEnd_toEndOf="@id/teams_container"
+        app:layout_constraintTop_toTopOf="@id/teams"
+        app:layout_constraintStart_toStartOf="@id/teams"
+        app:layout_constraintEnd_toEndOf="@id/teams"
         android:layout_marginTop="20dp"
         />
 

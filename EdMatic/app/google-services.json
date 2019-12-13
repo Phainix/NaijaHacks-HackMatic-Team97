@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "790603860698",
+    "firebase_url": "https://edmatic-f7d2c.firebaseio.com",
+    "project_id": "edmatic-f7d2c",
+    "storage_bucket": "edmatic-f7d2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790603860698:android:ea63629ca313ff05f133e3",
+        "android_client_info": {
+          "package_name": "com.hackmatic.edmatic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790603860698-93fsm0hjllg051mpqj55l7r1phu5esk2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackmatic.edmatic",
+            "certificate_hash": "41728bf198ea19439690a39f802f1a38795bec78"
+          }
+        },
+        {
+          "client_id": "790603860698-504b7cg43om91f9ki3eftp8eg30kdcde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsORfr-50dqA_WhkoooTm4mQYTO3NnV-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790603860698-504b7cg43om91f9ki3eftp8eg30kdcde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

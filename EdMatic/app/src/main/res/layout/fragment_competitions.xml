@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_light_bg">
@@ -17,28 +19,19 @@
         android:textSize="16sp"
         android:layout_marginLeft="@dimen/spacing_avg"/>
 
-    <ScrollView
-        android:id="@+id/competition_list_container"
+    <ListView
+        android:id="@+id/competition_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:divider="@drawable/spacer_medium"
+        android:paddingStart="30dp"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/competition_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:fillViewport="true"
-        android:paddingTop="@dimen/spacing_medium"
-        >
-
-        <LinearLayout
-            android:id="@+id/competition_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp"
-            android:divider="@drawable/spacer_medium"
-            android:showDividers="middle"
-            android:paddingTop="@dimen/spacing_medium"/>
-
-    </ScrollView>
+        tools:context="com.hackmatic.edmatic.ui.competitions.CompetitionsFragment"
+        tools:listitem="@layout/activity_list_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
