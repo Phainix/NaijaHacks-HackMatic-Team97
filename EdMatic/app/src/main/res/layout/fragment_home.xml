@@ -1,19 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_home"
+    <ImageView
+        android:id="@+id/light_bg"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/title_home"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_light_bg" />
+
+    <ImageView
+        android:id="@+id/dark_bg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:contentDescription="@string/title_home"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_dark_bg_sm" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:text="Lorem Ipsum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 badges"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rubik_light"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/image_badge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_badge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/username"
+        android:layout_marginEnd="30dp"/>
+
+    <TextView
+        android:id="@+id/badge_number"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="@id/image_badge"
+        app:layout_constraintTop_toTopOf="@id/image_badge"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@drawable/badge"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"/>
+
+    <HorizontalScrollView
+        android:id="@+id/upcoming_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="130dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/upcoming_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:divider="@drawable/spacer_medium"
+            android:showDividers="middle"
+            />
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_title"
+        app:layout_constraintStart_toStartOf="@+id/stat"
+        app:layout_constraintTop_toBottomOf="@+id/upcoming_container"
+        android:text="@string/title_activities"
+        android:fontFamily="@font/rubik_medium"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:id="@+id/activity_container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/activities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:divider="@drawable/spacer_medium"
+            android:showDividers="middle"
+            android:paddingTop="@dimen/spacing_medium"/>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

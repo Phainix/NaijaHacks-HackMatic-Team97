@@ -39,4 +39,6 @@
     <string name="title_team">Team</string>
     <string name="title_account">Account</string>
     <string name="title_competitions">Competitions</string>
+    <string name="upcoming">Upcoming competitions</string>
+    <string name="title_activities">Activities</string>
 </resources>
