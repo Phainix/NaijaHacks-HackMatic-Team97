@@ -40,6 +40,8 @@
         android:text="9:00 AM - 9:50 AM"
         app:layout_constraintStart_toStartOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:drawableLeft="@drawable/ic_clock_grey"
+        android:drawablePadding="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
