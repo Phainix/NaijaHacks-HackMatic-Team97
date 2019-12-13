@@ -12,6 +12,7 @@
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
 
         <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="editTextColor">#8193AE</item>
     </style>
 
     <style name="SplashTextTheme">
@@ -68,6 +69,12 @@
         <item name="android:paddingStart">30dp</item>
         <item name="android:paddingEnd">30dp</item>
         <item name="android:textSize">15sp</item>
+        <item name="editTextColor">#8193AE</item>
+        <item name="android:textColorHint">#8193AE</item>
+    </style>
+
+    <style name="InputRounded" parent="Input">
+        <item name="android:background">@drawable/input_white_round</item>
     </style>
 
 </resources>

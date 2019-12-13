@@ -29,7 +29,6 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-
         List<Challenge> challenges = homeViewModel.getUpcomingChallenges();
         LinearLayout upcomingLayout = (LinearLayout) root.findViewById(R.id.upcoming_list);
         for (int i = 0; i < challenges.size(); i++) {

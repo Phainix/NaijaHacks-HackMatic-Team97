@@ -41,4 +41,6 @@
     <string name="title_competitions">Competitions</string>
     <string name="upcoming">Upcoming competitions</string>
     <string name="title_activities">Activities</string>
+    <string name="input_search">Search teams by name, tags</string>
+    <string name="team_member_count">No of team members</string>
 </resources>

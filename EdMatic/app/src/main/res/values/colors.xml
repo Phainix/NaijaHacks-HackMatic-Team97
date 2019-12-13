@@ -6,6 +6,7 @@
 
     <color name="colorLightPrimary">#F8FBFF</color>
     <color name="colorLightPrimaryDark">#E2E9F5</color>
+    <color name="colorLightPrimaryDarker">#8193AE</color>
 
     <color name="white">#FFFFFF</color>
 </resources>

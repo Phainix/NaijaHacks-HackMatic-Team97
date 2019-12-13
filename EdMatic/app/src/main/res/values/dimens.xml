@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="spacing_medium">20dp</dimen>
+    <dimen name="spacing_avg">30dp</dimen>
+    <dimen name="spacing_large">60dp</dimen>
 </resources>

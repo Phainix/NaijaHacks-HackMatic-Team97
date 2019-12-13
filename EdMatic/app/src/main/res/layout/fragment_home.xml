@@ -75,7 +75,7 @@
         android:textSize="14sp"
         android:background="@drawable/badge"
         android:layout_centerVertical="true"
-        android:gravity="center_horizontal"/>
+        android:gravity="center"/>
 
     <HorizontalScrollView
         android:id="@+id/upcoming_container"
