@@ -13,12 +13,14 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.hackmatic.edmatic.R;
 import com.hackmatic.edmatic.adapter.ItemAdapter;
 import com.hackmatic.edmatic.data.Competition;
+import com.hackmatic.edmatic.ui.competition_detail.CompetitionDetailFragment;
 
 import java.util.List;
 
@@ -42,13 +44,26 @@ public class CompetitionsFragment extends Fragment {
         return mRoot;
     }
 
+
+
     private AdapterView.OnItemClickListener messageClickedHandler = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
             // Do something in response to the click
-            Toast.makeText(mRoot.getContext(),
-                    "Item selected " + position,
-                    Toast.LENGTH_SHORT).show();
+            loadCompetitionDetailFragment(position);
+
         }
     };
+
+    private void loadCompetitionDetailFragment(int competition) {
+        Bundle bundle = new Bundle();
+        bundle.putInt(CompetitionDetailFragment.COMPETITION_KEY, competition);
+
+        Fragment fragment = new CompetitionDetailFragment();
+        fragment.setArguments(bundle);
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 
 }
