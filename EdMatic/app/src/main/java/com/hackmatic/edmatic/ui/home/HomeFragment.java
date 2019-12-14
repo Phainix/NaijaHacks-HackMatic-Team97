@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.hackmatic.edmatic.R;
 import com.hackmatic.edmatic.data.Activity;
 import com.hackmatic.edmatic.data.Challenge;
@@ -21,16 +22,23 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
+    private FirebaseAuth mAuth;
     private HomeViewModel homeViewModel;
+
+    TextView mName;
+    private View mRoot;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        mRoot = inflater.inflate(R.layout.fragment_home, container, false);
+        mAuth = FirebaseAuth.getInstance();
+
+        setUpLayout();
 
         List<Challenge> challenges = homeViewModel.getUpcomingChallenges();
-        LinearLayout upcomingLayout = (LinearLayout) root.findViewById(R.id.upcoming_list);
+        LinearLayout upcomingLayout = (LinearLayout) mRoot.findViewById(R.id.upcoming_list);
         for (int i = 0; i < challenges.size(); i++) {
             View upcomingItem = inflater.inflate(R.layout.upcoming_list_item, null);
             TextView name = (TextView) upcomingItem.findViewById(R.id.name);
@@ -43,7 +51,7 @@ public class HomeFragment extends Fragment {
         }
 
         List<Activity> activities = homeViewModel.getActivities();
-        LinearLayout activitiesLayout = (LinearLayout) root.findViewById(R.id.activities);
+        LinearLayout activitiesLayout = (LinearLayout) mRoot.findViewById(R.id.activities);
         for (int i = 0; i < activities.size(); i++) {
             View activity = inflater.inflate(R.layout.activity_list_item, null);
             TextView name = (TextView) activity.findViewById(R.id.name);
@@ -53,6 +61,11 @@ public class HomeFragment extends Fragment {
             activitiesLayout.addView(activity);
         }
 
-        return root;
+        return mRoot;
+    }
+
+    private void setUpLayout() {
+        mName = (TextView) mRoot.findViewById(R.id.username);
+        mName.setText(mAuth.getCurrentUser().getDisplayName());
     }
 }

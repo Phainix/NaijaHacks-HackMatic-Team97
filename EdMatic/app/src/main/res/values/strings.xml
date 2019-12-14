@@ -44,4 +44,5 @@
     <string name="input_search">Search teams by name, tags</string>
     <string name="team_member_count">No of team members</string>
     <string name="answer">Answer</string>
+    <string name="title_logout">Sign Out</string>
 </resources>
