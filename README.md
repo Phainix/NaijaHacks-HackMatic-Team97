@@ -6,7 +6,6 @@
  - Adekogbe Faith, adekogbephait@gmail.com
  - Ogundeyi boluwatife, tifeasypeasy@gmail.com
  - Mubarak SULAYMAN, mubaracksulaymann@gmail.com
- - Okonknwo Chidimma Benita, okonkwobenita84@gmail.com
 
 # Problem
 Learners in today's world are faced with difficulties ranging from retention,
