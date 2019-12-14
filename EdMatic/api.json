@@ -1,0 +1,50 @@
+{
+  "firecloud": "https://edmatic-f7d2c.firebaseio.com",
+  "schema": {
+    "competitions": [
+      "created_on",
+      "date",
+      "desc",
+      "grade",
+      "level",
+      "name",
+      "owner",
+      "participants",
+      "type",
+      "winner"
+    ],
+    "activities": [
+      "activity",
+      "created_on",
+      "user_id"
+    ],
+    "questions": [
+      "answer",
+      "answered_by",
+      "answered_on",
+      "competition",
+      "created_on",
+      "duration",
+      "options",
+      "question"
+    ],
+    "teams": [
+      "created_by",
+      "created_on",
+      "desc",
+      "fields",
+      "members",
+      "name",
+      "status"
+    ],
+    "users": [
+      "auth_code",
+      "email",
+      "fname",
+      "id",
+      "lname",
+      "name",
+      "token"
+    ]
+  }
+}
