@@ -12,6 +12,7 @@
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
 
         <item name="android:fontFamily">@font/rubik_regular</item>
+        <item name="editTextColor">#8193AE</item>
     </style>
 
     <style name="SplashTextTheme">
@@ -59,6 +60,11 @@
         <item name="android:paddingEnd">30dp</item>
     </style>
 
+    <style name="DefaultButtonSm" parent="DefaultButton">
+        <item name="android:paddingStart">@dimen/spacing_x_small</item>
+        <item name="android:paddingEnd">@dimen/spacing_x_small</item>
+    </style>
+
     <style name="Input">
         <item name="android:layout_height">45dp</item>
         <item name="android:layout_width">0dp</item>
@@ -68,6 +74,21 @@
         <item name="android:paddingStart">30dp</item>
         <item name="android:paddingEnd">30dp</item>
         <item name="android:textSize">15sp</item>
+        <item name="editTextColor">#8193AE</item>
+        <item name="android:textColorHint">#8193AE</item>
     </style>
 
+    <style name="InputRounded" parent="Input">
+        <item name="android:background">@drawable/input_white_round</item>
+    </style>
+
+    <style name="Success">
+        <item name="android:fontFamily">@font/rubik_medium</item>
+        <item name="android:textColor">#56CB8F</item>
+        <item name="android:background">#E0F5EB</item>
+        <item name="android:paddingLeft">@dimen/spacing_medium</item>
+        <item name="android:paddingRight">@dimen/spacing_medium</item>
+        <item name="android:paddingTop">@dimen/spacing_x_small</item>
+        <item name="android:paddingBottom">@dimen/spacing_x_small</item>
+    </style>
 </resources>

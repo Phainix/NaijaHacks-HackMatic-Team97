@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryMedium">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="80dp">
+
+    <ImageView
+        android:id="@+id/dark_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/title_competitions"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_blue_medium" />
+
+    <ImageView
+        android:id="@+id/darker_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/title_competitions"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dark_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@color/colorPrimaryMedium" />
+
+    <TextView
+        android:id="@+id/team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MATH MASTERS (PHASE 4)"
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="18sp"
+        android:layout_marginStart="@dimen/spacing_avg"
+        android:layout_marginTop="@dimen/spacing_avg"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/dark_bg"
+        app:layout_constraintTop_toTopOf="@+id/dark_bg" />
+
+    <TextView
+        android:id="@+id/team_member_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 team members"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/colorLightPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/team_name"
+        app:layout_constraintTop_toBottomOf="@+id/team_name" />
+
+    <ImageView
+        android:id="@+id/menu_activities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/title_activities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/team_name"
+        app:layout_constraintBottom_toBottomOf="@+id/team_name"
+        android:layout_marginEnd="@dimen/spacing_avg"
+        app:srcCompat="@drawable/ic_menu" />
+
+
+    <ImageView
+        android:id="@+id/clock"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="78dp"
+        android:contentDescription="@string/title_competitions"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clock_mod" />
+
+    <TextView
+        android:id="@+id/ticking_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2:45"
+        android:fontFamily="@font/rubik_regular"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/clock"
+        app:layout_constraintTop_toTopOf="@+id/clock"
+        app:layout_constraintBottom_toBottomOf="@+id/clock"
+        app:layout_constraintEnd_toEndOf="@+id/clock"/>
+
+
+    <TextView
+        android:id="@+id/competition_activity_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starting Competition..."
+        android:fontFamily="@font/rubik_medium"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/team_name"
+        app:layout_constraintTop_toBottomOf="@+id/clock"
+        android:layout_marginTop="@dimen/spacing_medium"/>
+
+
+    <View
+        app:layout_constraintTop_toTopOf="@+id/question_container"
+        app:layout_constraintBottom_toBottomOf="@+id/question_container"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg_half_left"
+        android:id="@+id/question_left"/>
+
+    <View
+        app:layout_constraintTop_toTopOf="@+id/question_container"
+        app:layout_constraintBottom_toBottomOf="@+id/question_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg_half"
+        android:id="@+id/question_right"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/question_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/question_right"
+        app:layout_constraintStart_toEndOf="@+id/question_left"
+        app:layout_constraintTop_toBottomOf="@id/competition_activity_desc"
+        android:layout_marginTop="@dimen/spacing_avg"
+        android:background="@drawable/white_bg"
+        android:padding="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_small"
+        android:layout_marginLeft="@dimen/spacing_small">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_clock_blue"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="1:45 minutes"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/question_duration"/>
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/Success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Correct"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:text="QUESTION"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_duration"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mrs. Rodger got a weekly raise of $145. If she gets paid every other week, write an integer describing how the raise will affect her paycheck."
+            android:id="@+id/question"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:textColor="@color/colorLightPrimaryDarker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_question"
+            android:lineHeight="22sp"
+            android:fontFamily="@font/rubik_medium"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/assigned_contestant_col"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@drawable/round_blue_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/assigned_contestant"
+            app:layout_constraintStart_toEndOf="@+id/assigned_contestant_col"
+            app:layout_constraintTop_toTopOf="@+id/assigned_contestant_col"
+            app:layout_constraintBottom_toBottomOf="@+id/assigned_contestant_col"
+            android:text="Bode Thomas"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:textColor="@color/colorLightPrimaryDarker"
+            />
+
+        <Button
+            android:id="@+id/answer"
+            style="@style/DefaultButtonSm"
+            android:text="@string/answer"
+            app:layout_constraintTop_toTopOf="@+id/assigned_contestant_col"
+            app:layout_constraintBottom_toBottomOf="@+id/assigned_contestant_col"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
