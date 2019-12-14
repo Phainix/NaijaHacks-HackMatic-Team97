@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    tools:context=".SignupActivity"
+    android:id="@+id/signup_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/signup_top"
+        android:id="@+id/signin_top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +63,7 @@
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_top"
+        app:layout_constraintTop_toBottomOf="@+id/signin_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_weight="40">
 
@@ -95,6 +96,7 @@
             app:layout_constraintTop_toTopOf="@+id/dark_bg" />
 
         <Button
+            android:visibility="gone"
             android:id="@+id/twitterAuth"
             style="@style/AuthButton"
             android:layout_width="0dp"
