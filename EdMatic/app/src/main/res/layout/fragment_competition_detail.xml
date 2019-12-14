@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryMedium">
+    android:background="@color/colorPrimaryMedium"
+    android:id="@+id/competition_detail_layout">
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -88,7 +89,7 @@
         android:id="@+id/ticking_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2:45"
+        android:text="0"
         android:fontFamily="@font/rubik_regular"
         android:textSize="30sp"
         android:textColor="@color/white"
@@ -110,31 +111,12 @@
         app:layout_constraintTop_toBottomOf="@+id/clock"
         android:layout_marginTop="@dimen/spacing_medium"/>
 
-
-    <View
-        app:layout_constraintTop_toTopOf="@+id/question_container"
-        app:layout_constraintBottom_toBottomOf="@+id/question_container"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="15dp"
-        android:layout_height="0dp"
-        android:background="@drawable/white_bg_half_left"
-        android:id="@+id/question_left"/>
-
-    <View
-        app:layout_constraintTop_toTopOf="@+id/question_container"
-        app:layout_constraintBottom_toBottomOf="@+id/question_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="15dp"
-        android:layout_height="0dp"
-        android:background="@drawable/white_bg_half"
-        android:id="@+id/question_right"/>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/question_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/question_right"
-        app:layout_constraintStart_toEndOf="@+id/question_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/competition_activity_desc"
         android:layout_marginTop="@dimen/spacing_avg"
         android:background="@drawable/white_bg"
@@ -223,6 +205,27 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        app:layout_constraintTop_toTopOf="@+id/question_container"
+        app:layout_constraintBottom_toBottomOf="@+id/question_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/question_right"
+        android:layout_marginRight="2dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg_half_left_shadow"
+        android:id="@+id/question_left"/>
+
+    <View
+        app:layout_constraintTop_toTopOf="@+id/question_container"
+        app:layout_constraintBottom_toBottomOf="@+id/question_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/question_left"
+        android:layout_marginLeft="2dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg_half_shadow"
+        android:id="@+id/question_right"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

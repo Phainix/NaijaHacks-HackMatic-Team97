@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <padding
+                android:bottom="1dp"
+                android:left="4dp"
+                android:right="0dp"
+                android:top="1dp" />
+
+            <solid android:color="#2DCECECE" />
+
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <item
+
+        >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+
+            <!--corners allow us to make the rounded corners button-->
+            <corners android:topLeftRadius="8dp" android:bottomLeftRadius="8dp" />
+        </shape>
+    </item>
+
+</layer-list>

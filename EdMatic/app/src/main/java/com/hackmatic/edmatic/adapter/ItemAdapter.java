@@ -23,6 +23,11 @@ public class ItemAdapter extends BaseAdapter {
         inflter = (LayoutInflater.from(applicationContext));
     }
 
+    public void add(List<Competition> competitions) {
+        this.competitions.addAll(competitions);
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return competitions.size();
@@ -30,7 +35,7 @@ public class ItemAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return competitions.get(i);
     }
 
     @Override

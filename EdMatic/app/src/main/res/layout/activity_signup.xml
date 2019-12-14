@@ -96,6 +96,7 @@
             app:layout_constraintTop_toTopOf="@+id/dark_bg" />
 
         <Button
+            android:visibility="gone"
             android:id="@+id/twitterAuth"
             style="@style/AuthButton"
             android:layout_width="0dp"

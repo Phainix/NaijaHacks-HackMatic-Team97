@@ -23,11 +23,11 @@ public class CompetitionsViewModel extends ViewModel {
     }
 
     public List<Competition> getCompetitions() {
-        Competition competition1 = new Competition("Chemistry Lions", " 8:40 AM");
-        Competition competition2 = new Competition("Math Masters Phase (2)", "9:00 AM");
-        Competition competition3 = new Competition("Physics Challenge", "10:00 AM ");
-        Competition competition4 = new Competition("Lagos Math Gurus", "11:00 AM");
-        Competition competition5 = new Competition("Astronauts Junior Phase", "02:00 AM ");
+        Competition competition1 = new Competition("Chemistry Lions", " 8:40 AM", "1");
+        Competition competition2 = new Competition("Math Masters Phase (2)", "9:00 AM", "2");
+        Competition competition3 = new Competition("Physics Challenge", "10:00 AM ", "3");
+        Competition competition4 = new Competition("Lagos Math Gurus", "11:00 AM", "4");
+        Competition competition5 = new Competition("Astronauts Junior Phase", "02:00 AM ", "5");
 
         List<Competition> competitions =  new ArrayList<Competition>();
         competitions.add(competition1);

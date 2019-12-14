@@ -104,6 +104,7 @@ public class TeamFragment extends Fragment {
                         spinner.setVisibility(View.GONE);
                     } else {
                         Log.d(TAG, "Error getting documents: ", task.getException());
+                        getFragmentManager().popBackStackImmediate();
                     }
                 }
             });
