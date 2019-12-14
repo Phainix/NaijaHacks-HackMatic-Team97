@@ -45,4 +45,7 @@
     <string name="team_member_count">No of team members</string>
     <string name="answer">Answer</string>
     <string name="title_logout">Sign Out</string>
+    <string name="input_team_name">Enter team name</string>
+    <string name="input_team_desc">Enter team description</string>
+    <string name="input_team_fields">Enter comma separated fields eg. Physics, Science, Economics, Maths</string>
 </resources>

@@ -1,9 +1,18 @@
 package com.hackmatic.edmatic.ui.team;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.hackmatic.edmatic.DataStore;
 import com.hackmatic.edmatic.data.Team;
 
 import java.util.ArrayList;
@@ -37,6 +46,7 @@ public class TeamViewModel extends ViewModel {
         team.add(team4);
         team.add(team5);
         team.add(team6);
+
         return team;
     }
 }

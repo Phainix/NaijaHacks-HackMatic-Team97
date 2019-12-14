@@ -23,6 +23,11 @@ public class TeamItemAdapter extends BaseAdapter {
         inflter = (LayoutInflater.from(applicationContext));
     }
 
+    public void add(List<Team> competitions) {
+        this.teams.addAll(competitions);
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return teams.size();

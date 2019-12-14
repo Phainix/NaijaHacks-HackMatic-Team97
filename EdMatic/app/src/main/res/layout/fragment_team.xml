@@ -32,17 +32,27 @@
         android:drawableRight="@drawable/ic_search"
         />
 
+    <Button
+        android:id="@+id/new_team"
+        style="@style/DefaultButton"
+        android:text="Create a new team"
+        app:layout_constraintEnd_toEndOf="@+id/search"
+        app:layout_constraintStart_toStartOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        android:layout_marginTop="40dp"
+        android:layout_width="0dp"/>
+
     <ListView
         android:id="@+id/teams"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/primary_blue"
         android:paddingTop="45dp"
+        android:paddingBottom="45dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintTop_toBottomOf="@+id/new_team"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         tools:context="com.hackmatic.edmatic.ui.team.TeamFragment"
         tools:listitem="@layout/team_list_item"/>
 

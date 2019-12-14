@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/spacing_medium"
+    android:paddingRight="@dimen/spacing_medium"
+    android:id="@+id/new_team_layout">
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/rubik_medium"
+        android:lineSpacingExtra="10sp"
+        android:text="Team Details"
+        style="@style/DarkMediumText"
+        android:paddingTop="30dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        style="@style/Input"
+        android:hint="@string/input_team_name"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        android:autofillHints="@string/input_team_name"
+        android:layout_width="match_parent"
+        />
+
+    <EditText
+        android:id="@+id/desc"
+        style="@style/Input"
+        android:hint="@string/input_team_desc"
+        android:inputType="text"
+        android:autofillHints="@string/input_team_desc"
+        android:layout_width="match_parent"
+        />
+
+    <EditText
+        android:id="@+id/fields"
+        style="@style/Input"
+        android:hint="@string/input_team_fields"
+        android:inputType="text"
+        android:autofillHints="@string/input_team_fields"
+        android:layout_width="match_parent"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/DefaultButton"
+        android:text="Create a new team"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"/>
+
+</LinearLayout>

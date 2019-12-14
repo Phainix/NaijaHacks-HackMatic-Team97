@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,6 +27,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -150,8 +152,16 @@ public class SignupActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success");
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    saveUserDetailsToCollection(acct);
+                    final FirebaseUser user = mAuth.getCurrentUser();
+                    AsyncTask asyncTask = new AsyncTask() {
+                        @Override
+                        protected Object doInBackground(Object[] objects) {
+                            saveUserDetailsToCollection(acct, user);
+                            return null;
+                        }
+                    };
+                    asyncTask.execute();
+
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -163,7 +173,7 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
-    private void saveUserDetailsToCollection(final GoogleSignInAccount acct) {
+    private void saveUserDetailsToCollection(final GoogleSignInAccount acct, final FirebaseUser firebaseUser) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         // Create a new user with a first and last name
@@ -175,15 +185,17 @@ public class SignupActivity extends AppCompatActivity {
         user.put("token", acct.getIdToken());
         user.put("id", acct.getId());
         user.put("auth_code", acct.getServerAuthCode());
+        user.put("uid", firebaseUser.getUid());
+        user.put("created_on", FieldValue.serverTimestamp());
 
         // Add a new document with a generated ID
         db.collection("users")
-                .document(acct.getId())
+                .document(firebaseUser.getUid())
             .set(user)
             .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
-                    Log.d(TAG, "User record added with ID: " + acct.getId());
+                    Log.d(TAG, "User record added with ID: " + firebaseUser.getUid());
                     goToDetails();
                 }
             })

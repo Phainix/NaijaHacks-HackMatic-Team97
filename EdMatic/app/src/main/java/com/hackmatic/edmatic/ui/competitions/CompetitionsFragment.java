@@ -28,6 +28,7 @@ public class CompetitionsFragment extends Fragment {
 
     private CompetitionsViewModel competitionsViewModel;
     private View mRoot;
+    private View spinner;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,9 +36,13 @@ public class CompetitionsFragment extends Fragment {
                 ViewModelProviders.of(this).get(CompetitionsViewModel.class);
         mRoot = inflater.inflate(R.layout.fragment_competitions, container, false);
 
-        List<Competition> competitions = competitionsViewModel.getCompetitions();
-        ListView competitionsList = (ListView) mRoot.findViewById(R.id.competition_list);
+        final ListView competitionsList = (ListView) mRoot.findViewById(R.id.competition_list);
         competitionsList.setOnItemClickListener(messageClickedHandler);
+
+        spinner = getActivity().findViewById(R.id.progress_bar_holder);
+        spinner.setVisibility(View.VISIBLE);
+
+        List<Competition> competitions = competitionsViewModel.getCompetitions();
 
         ItemAdapter itemAdapter = new ItemAdapter(mRoot.getContext(), competitions);
         competitionsList.setAdapter(itemAdapter);
