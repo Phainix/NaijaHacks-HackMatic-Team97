@@ -19,7 +19,7 @@ Students from various instituions are connected to foster collaboration and shar
 # Proposed Stack
 Java Android, PHP, MySQL, Firebase
 
-# Features of the android app 📱
+# Features of the android app 
 * Registration 
 * Login
 * Create a team

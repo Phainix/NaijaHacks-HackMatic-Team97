@@ -108,6 +108,12 @@ public class SignupActivity extends AppCompatActivity {
         finish();
     }
 
+    private void goToDetails() {
+        Intent intent = new Intent(SignupActivity.this, DetailActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -138,23 +144,23 @@ public class SignupActivity extends AppCompatActivity {
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            saveUserDetailsToCollection(acct);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Snackbar.make(findViewById(R.id.signup_layout), "Google sign up failed please try again", Snackbar.LENGTH_SHORT).show();
-                        }
+            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "signInWithCredential:success");
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    saveUserDetailsToCollection(acct);
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "signInWithCredential:failure", task.getException());
+                    Snackbar.make(findViewById(R.id.signup_layout), "Google sign up failed please try again", Snackbar.LENGTH_SHORT).show();
+                }
 
-                        // ...
-                    }
-                });
+                // ...
+            }
+        });
     }
 
     private void saveUserDetailsToCollection(final GoogleSignInAccount acct) {
@@ -178,7 +184,7 @@ public class SignupActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(Void aVoid) {
                     Log.d(TAG, "User record added with ID: " + acct.getId());
-                    goToDashboard();
+                    goToDetails();
                 }
             })
             .addOnFailureListener(new OnFailureListener() {
